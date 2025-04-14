@@ -1,5 +1,4 @@
-//https://script.google.com/macros/s/AKfycbzWF2iYrp7gQxxDeQmmTRxDfLClRGIL5twTiFsMEYbfYhSBZu-cTMOsPA4at8qyX3GoIw/exec
-const apiUrl = "https://script.google.com/macros/s/AKfycbwuvtBuq1X2I4MoBnvYMb4l9_kAF9JfrEa8_M02LNK7JJJhsOt7iXC8sfJaYU26DM1rVw/exec"; // 替換為你的 API 網址
+const apiUrl = "https://script.google.com/macros/s/AKfycbwJ-wYTAE3_PHa98dNfoUCVcBUwbrvKdINobbuQPapKK1aTqzq8gZFwx2JOEF3dmoQUcQ/exec"; // 替換為你的 API 網址
 
 const form = document.getElementById("recordForm");
 const recordsContainer = document.getElementById("records");
@@ -45,8 +44,9 @@ form.addEventListener("submit", async function (event) {
         method: "POST",
         body: JSON.stringify(newRecord),
         headers: { "Content-Type": "application/json" },
-        mode: "no-cors"  // 避免 CORS 錯誤
+        mode: "no-cors"
     });
+    
 
     form.reset();
     alert("記帳成功！（請到 Google Sheets 查看資料）");
