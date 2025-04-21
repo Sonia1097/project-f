@@ -5,53 +5,60 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    overflow: hidden; /* 防止整體頁面滾動 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 主容器 */
 .container {
     display: flex;
-    height: 100vh;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    gap: 20px;
 }
 
 /* 左側表單區域 */
 .form-section {
-    width: 300px; /* 固定寬度 */
-    padding: 30px;
+    width: 40%;
+    padding: 20px;
     background: #faead6;
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
-    height: 100vh;
-    overflow-y: auto; /* 如果表單很長才需要滾動 */
-    position: fixed; /* 固定位置 */
-    left: 0;
-    top: 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 右側紀錄區域 */
 .records-section {
     flex: 1;
-    padding: 30px;
-    margin-left: 300px; /* 與左側寬度相同 */
-    height: 100vh;
-    overflow-y: auto; /* 允許垂直滾動 */
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 標題 */
 h1 {
     text-align: center;
     color: #00CACA;
-    font-size: 2rem; /* 稍微縮小一點 */
+    font-size: 2rem;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 /* 記帳表單 */
 form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     background-color: #faead6;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
     width: 100%;
 }
 
@@ -60,13 +67,12 @@ form label {
     font-size: 1.1rem;
     color: #00CACA;
     margin-bottom: 8px;
-    display: block;
 }
 
 form input, form select, form button {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 5px 0;
     border: 2px solid #9cd4d1;
     border-radius: 10px;
     font-size: 1rem;
@@ -146,3 +152,15 @@ hr {
     padding: 5px 10px;
     cursor: pointer;
 }
+.filter-section {
+    margin-bottom: 20px;
+}
+
+#monthFilter {
+    padding: 8px;
+    border: 2px solid #9cd4d1;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
